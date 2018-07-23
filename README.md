@@ -9,3 +9,18 @@ The model was developed in three stages:
 3) Model Training. Model was trained using xgboost library. Parametes num_round, eta, max_depth and min_child_weight were additionaly tuned.
 
 Result: Test set accuracy - 80.2%.
+
+
+## Web Scraping from Amazon
+
+This folder contains dataset with book reviews from Amazon.com and script for collecting this dataset.
+
+R script. For web scraping was used 'rvest' library. Script consists of two parts. Part 1 scraps Amazon to make a list of books and links to their reviews and saves it to database 'book_list', where field 'id' - unique Amazon product code. Part 2 scraps reviews of the books from the book list and saves them to file.
+
+Dataset. Contains ~63,000 book reviews from www.amazon.com. Ranking varies from 1 to 5 stars.
+Average ranking - 4.543, median ranking - 5. Set hightly unbalanced.
+Average review length - 40.6 words and 221.1 symbols.
+10 the most frequent words: the, and, to, I, a, of, is, in, book, this.
+Number of reviews that have 1-2 words - 9%; 3-9 words - 20%; 10-49 words - 50%; 50+ words - 21%.
+Number of Duplicates: 5427
+
